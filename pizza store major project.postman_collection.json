@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "015c6cee-42b3-429e-b54c-8a294ad0c2af",
+		"name": "pizza store major project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36962658"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/items",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"BBQ Chicken Deluxe\",\r\n    \"Price\": 12.99,\r\n    \"Description\": \"Pizza with BBQ sauce, chicken, and extra toppings\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/items",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"BBQ Chicken Deluxe\",\r\n    \"Price\": 12.99,\r\n    \"Description\": \"Pizza with BBQ sauce, chicken, and extra toppings\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/items/66bd909ae77e1d141b0893b1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"BBQ Chicken Deluxe\",\r\n    \"Price\": 129,\r\n    \"Description\": \"Pizza with BBQ sauce, chicken, and extra toppings\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/items/66bd909ae77e1d141b0893b1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"items",
+						"66bd909ae77e1d141b0893b1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
