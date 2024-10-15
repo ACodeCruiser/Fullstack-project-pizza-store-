@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Item</title>
+    <link rel="stylesheet" href="/form-styles.css">
+
+</head>
+<body>
+     <div>
+        <h1>Edit Item</h1>
+
+        <form action="/items/<%= item._id%>?_method=PUT" method="post">
+    <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="Name" value="<%=item.Name %>" required>
+    </div>
+    <div>
+        <label for="price">Price</label>
+    </div>   <input type="number" id="price" name="Price" value="<%=item.Price%>" required>
+    <div >
+        <label for="description"> Description</label>
+        <input type="text" id="description" name="Description" value="<%= item.Description%>" required>
+    </div>
+
+        <button type="submit">Update </button>
+
+        </form>
+
+       <% if(errors){%>
+            <div class="error">
+                <h3>Error(s) :</h3>
+            <ul>
+                <%errors.forEach(error =>{%>
+                    <li> <%= error.msg %></li>
+                <%})%>
+            
+            </ul>
+            </div>
+        <%}%>
+
+     </div>
+
+
+    
+
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>items List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+
+    <h1>item List</h1>
+
+    <a href="/item/new" class="add-item-btn">Add Item</a>
+          
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+
+
+            <% items.forEach(item => { %>
+                <tr>
+                    <td><%= item.Name %></td>
+                    <td><%= item.Price %></td>
+                    <td><%= item.Description %></td>
+                    <td class="actions">
+                        <a href="/items/<%= item._id %>/edit">Edit</a>
+                        <form action="/items/<%= item._id %>?_method=DELETE" method="post">
+                            <button type="submit" class="delete-btn">DELETE</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }) %>
+
+        </table>
+
+    </div>
+    
+
+    
+
+</body>
+</html> 
